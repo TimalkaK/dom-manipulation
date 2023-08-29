@@ -76,6 +76,15 @@ const getPassword = () => {
   
       const beforePara = document.getElementById("progress");
       document.body.insertBefore(newPara, beforePara);
+  }else if (progress.value >=40 && progress.value < 60){
+
+      const newPara = document.createElement("p");
+      const text = document.createTextNode("Pretty good");
+      newPara.appendChild(text);
+  
+      const beforePara = document.getElementById("progress");
+      document.body.insertBefore(newPara, beforePara);
+
   }
 
   if(input < 8){
