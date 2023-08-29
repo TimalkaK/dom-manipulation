@@ -39,7 +39,7 @@ const getRandomMove = () => {
   const updateDOM = (moveOne, moveTwo, outcome) => {
     // TODO Implement this method to update the DOM
     // There are some images you can use in the images directory
-    console.log(outcome);
+    //console.log(outcome);
     document.getElementById('player-one-move__img').src = `images/${moveOne}.png`;
     document.getElementById('player-two-move__img').src = `images/${moveTwo}.png`;
     document.getElementById("player-one-move__name").textContent = moveOne;
@@ -47,7 +47,42 @@ const getRandomMove = () => {
     
     document.getElementById("winner-outcome").textContent = outcome;
   };
+
+  const checkPassword = () => {
+    getPassword();
+
+  };
+
   
-  const playButton = document.getElementById("play-btn");
-  playButton.addEventListener("click", playGame);
-  
+
+const getPassword = () => {
+
+  let count = 0
+
+  const input = document.getElementById("password").value.length;
+  const progress = document.getElementById("progress");
+
+  let progressValue = input * 5;
+
+  if (progress.value < 100){
+    progress.setAttribute("value", progressValue);
+  }
+
+  if(input < 8){
+    progress.style.accentColor="red";
+  }else{
+    progress.style.accentColor="blue";
+  }
+
+  console.log(input);
+
+  console.log(progress);
+
+ }
+
+
+
+
+const password = document.getElementById("password");
+password.addEventListener("input", getPassword);
+

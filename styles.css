@@ -5,7 +5,8 @@ body {
     font-family: sans-serif;
     text-align: center;
   }
-  
+
+
   .container {
     display: flex;
     justify-content: center;
@@ -45,7 +46,7 @@ body {
     width: 70%;
   }
   
-  .outcome {
+  .warning {
     color: var(--primary);
     font-size: 2em;
   }
