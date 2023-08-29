@@ -68,6 +68,16 @@ const getPassword = () => {
     progress.setAttribute("value", progressValue);
   }
 
+  if (progress.value < 40){
+      //turn into a function variable 
+      const newPara = document.createElement("p");
+      const text = document.createTextNode("Should be longer");
+      newPara.appendChild(text);
+  
+      const beforePara = document.getElementById("progress");
+      document.body.insertBefore(newPara, beforePara);
+  }
+
   if(input < 8){
     progress.style.accentColor="red";
   }else{
