@@ -80,8 +80,12 @@ const getPassword = () => {
 
   if(input < 8){
     progress.style.accentColor="red";
+
+  }else if(input >= 8 && input < 12){
+    progress.style.accentColor="orange";
   }else{
     progress.style.accentColor="blue";
+
   }
 
   console.log(input);
