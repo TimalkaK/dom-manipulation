@@ -85,6 +85,14 @@ const getPassword = () => {
       const beforePara = document.getElementById("progress");
       document.body.insertBefore(newPara, beforePara);
 
+  }else if (progress.value >= 60){
+    const newPara = document.createElement("p");
+    const text = document.createTextNode("Grrrreat!");
+    newPara.appendChild(text);
+
+    const beforePara = document.getElementById("progress");
+    document.body.insertBefore(newPara, beforePara);
+
   }
 
   if(input < 8){
@@ -93,8 +101,7 @@ const getPassword = () => {
   }else if(input >= 8 && input < 12){
     progress.style.accentColor="orange";
   }else{
-    progress.style.accentColor="blue";
-
+    progress.style.accentColor="green";
   }
 
   console.log(input);
